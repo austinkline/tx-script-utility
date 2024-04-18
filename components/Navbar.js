@@ -43,18 +43,17 @@ const Navbar = ({ argData, setArgData }) => {
         if (type === "contract") {
             return "Not Supported";
         }
-        if (signers > 1 && !canSupportMultiSign) {
-            // TODO: Implement multisig
-            return "Multisig is not Supported";
-        }
+        // if (signers > 1 && !canSupportMultiSign) {
+        //     // TODO: Implement multisig
+        //     return "Multisig is not Supported";
+        // }
         return buttonLabels[type];
     };
 
     const disabled =
         type === "unknown" ||
         type === "contract" ||
-        !editorReady ||
-        (signers > 1 && !canSupportMultiSign);
+        !editorReady
 
     const options = (
         <>
