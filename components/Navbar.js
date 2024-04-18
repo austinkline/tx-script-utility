@@ -43,6 +43,7 @@ const Navbar = ({ argData, setArgData }) => {
         if (type === "contract") {
             return "Not Supported";
         }
+
         // if (signers > 1 && !canSupportMultiSign) {
         //     // TODO: Implement multisig
         //     return "Multisig is not Supported";
